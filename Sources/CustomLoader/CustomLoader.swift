@@ -46,22 +46,20 @@ public struct LoaderAnimation: View {
 
 public class LoaderView: UIView {
     private var hostingController: UIHostingController<LoaderAnimation>?
-    public var color: UIColor = .blue
-    
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setupLoaderAnimation()
+//        setupLoaderAnimation()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupLoaderAnimation()
+//        setupLoaderAnimation()
     }
     
-    private func setupLoaderAnimation() {
+    private func customizeLoader(colors: UIColor = .blue) {
         // Create LoaderAnimation SwiftUI view
-        let loaderAnimation = LoaderAnimation(color: Color(uiColor: color))
+        let loaderAnimation = LoaderAnimation(color: Color(uiColor: colors))
         
         // Initialize UIHostingController with LoaderAnimation
         hostingController = UIHostingController(rootView: loaderAnimation)
