@@ -57,7 +57,7 @@ public class LoaderView: UIView {
 //        setupLoaderAnimation()
     }
     
-    private func customizeLoader(colors: UIColor = .blue) {
+    public func customizeLoader(colors: UIColor = .blue) {
         // Create LoaderAnimation SwiftUI view
         let loaderAnimation = LoaderAnimation(color: Color(uiColor: colors))
         
