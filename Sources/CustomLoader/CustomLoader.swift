@@ -10,7 +10,7 @@ public struct LoaderAnimation: View {
     var frameWidth: CGFloat = 100.0
     var color: Color = .blue
     
-    public init(color: Color = .blue) {
+    public init(color: Color = .red) {
         self.color = color
     }
     
