@@ -15,12 +15,12 @@ public class LoaderUIKIt: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        showLoader()
+//        showLoader()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        showLoader()
+//        showLoader()
     }
     
     public func showLoader(colors: UIColor = .blue) {
