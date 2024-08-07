@@ -4,7 +4,10 @@
 
 import SwiftUI
 
-public struct LoaderAnimation: View {
+
+//MARK: - SwiftUI Public Loader Function
+
+public struct LoaderSwiftUI: View {
     @State var isAnimating: Bool = false
     @State private var animationAmount = 1.0
     var frameWidth: CGFloat = 100.0
@@ -41,11 +44,14 @@ public struct LoaderAnimation: View {
 }
 
 #Preview {
-    LoaderAnimation()
+    LoaderSwiftUI()
 }
 
-public class LoaderView: UIView {
-    private var hostingController: UIHostingController<LoaderAnimation>?
+
+
+//MARK: - UIKIT Public Loader Function
+public class LoaderUIKIt: UIView {
+    private var hostingController: UIHostingController<LoaderSwiftUI>?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,7 +65,7 @@ public class LoaderView: UIView {
     
     public func customizeLoader(colors: UIColor = .blue) {
         // Create LoaderAnimation SwiftUI view
-        let loaderAnimation = LoaderAnimation(color: Color(uiColor: colors))
+        let loaderAnimation = LoaderSwiftUI(color: Color(uiColor: colors))
         
         // Initialize UIHostingController with LoaderAnimation
         hostingController = UIHostingController(rootView: loaderAnimation)
