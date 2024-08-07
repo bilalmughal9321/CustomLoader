@@ -9,6 +9,11 @@ public struct LoaderAnimation: View {
     @State private var animationAmount = 1.0
     var frameWidth: CGFloat = 100.0
     var color: Color = .blue
+    
+    public init(color: Color = .blue) {
+        self.color = color
+    }
+    
     public var body: some View {
         
         ZStack {
