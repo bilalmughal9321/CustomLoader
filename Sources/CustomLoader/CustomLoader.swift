@@ -44,18 +44,43 @@ public struct LoaderAnimation: View {
     LoaderAnimation()
 }
 
-
-public struct LoaderAnimationWrapper {
-    public static func makeLoaderAnimationController(frameWidth: CGFloat, frame: CGRect) -> UIViewController {
-        // Create LoaderAnimation view
-        let loaderAnimationView = LoaderAnimation()
+public class LoaderView: UIView {
+    private var hostingController: UIHostingController<LoaderAnimation>?
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupLoaderAnimation()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupLoaderAnimation()
+    }
+    
+    private func setupLoaderAnimation() {
+        // Create LoaderAnimation SwiftUI view
+        let loaderAnimation = LoaderAnimation(color: .blue)
         
-        // Create UIHostingController with LoaderAnimationView
-        let hostingController = UIHostingController(rootView: loaderAnimationView)
+        // Initialize UIHostingController with LoaderAnimation
+        hostingController = UIHostingController(rootView: loaderAnimation)
+        hostingController?.view.backgroundColor = .clear
         
-        // Set the frame for the hostingController's view
-        hostingController.view.frame = frame
-        
-        return hostingController
+        // Add the hostingController's view to the LoaderView
+        if let hostingView = hostingController?.view {
+            addSubview(hostingView)
+            
+            // Set up constraints or frame for the hostingController's view
+            hostingView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                hostingView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                hostingView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                hostingView.topAnchor.constraint(equalTo: topAnchor),
+                hostingView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            ])
+        }
+    }
+    
+    public func load() {
+        // You can add additional setup or start animations if needed
     }
 }
