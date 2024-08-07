@@ -65,3 +65,7 @@ fastlane/test_output
 **/Pods/
 */Pods/
 /Pods/
+
+
+# Xcode files
+.swiftpm
