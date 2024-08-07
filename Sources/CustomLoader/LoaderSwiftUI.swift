@@ -7,6 +7,7 @@ import SwiftUI
 
 //MARK: - SwiftUI Public Loader Function
 
+
 public struct LoaderSwiftUI: View {
     @State var isAnimating: Bool = false
     @State private var animationAmount = 1.0
@@ -28,7 +29,10 @@ public struct LoaderSwiftUI: View {
                     .frame(width: getCircleWidth(at: index))
                     .offset(y: -frameWidth / 2)
                     .rotationEffect(.degrees(isAnimating ? 360 : 0))
-                    .animation(.easeInOut(duration: 2-CGFloat(index)*0.2).delay(CGFloat(index)*0.2).repeatForever(autoreverses: false), value: isAnimating)
+                    .animation(
+                        .easeInOut(duration: 2-CGFloat(index)*0.2)
+                        .delay(CGFloat(index)*0.2)
+                        .repeatForever(autoreverses: false), value: isAnimating)
             }
         }
        
@@ -38,14 +42,18 @@ public struct LoaderSwiftUI: View {
         
     }
     
+    func hide() {
+        
+    }
+    
     func getCircleWidth(at index: Int) -> CGFloat {
         return frameWidth / 6 - CGFloat(index) * 1.5
     }
 }
 
-#Preview {
-    LoaderSwiftUI()
-}
+//#Preview {
+//    LoaderSwiftUI()
+//}
 
 
 

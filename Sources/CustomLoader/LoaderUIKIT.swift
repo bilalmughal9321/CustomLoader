@@ -15,15 +15,15 @@ public class LoaderUIKIt: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        customizeLoader()
+        showLoader()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        customizeLoader()
+        showLoader()
     }
     
-    public func customizeLoader(colors: UIColor = .blue) {
+    public func showLoader(colors: UIColor = .blue) {
         // Create LoaderAnimation SwiftUI view
         let loaderAnimation = LoaderSwiftUI(color: Color(uiColor: colors))
         
@@ -45,4 +45,11 @@ public class LoaderUIKIt: UIView {
             ])
         }
     }
+    
+    public func hideLoader() {
+        // Remove the hostingController's view from the superview
+        hostingController?.view.removeFromSuperview()
+        hostingController = nil
+    }
+    
 }
