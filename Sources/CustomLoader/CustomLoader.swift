@@ -48,6 +48,7 @@ public class LoaderView: UIView {
     private var hostingController: UIHostingController<LoaderAnimation>?
     public var color: UIColor = .blue
     
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupLoaderAnimation()
