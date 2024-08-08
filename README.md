@@ -26,7 +26,7 @@ Swift Package Manager is Apple's tool for managing the distribution of Swift cod
      ```
      https://github.com/bilalmughal9321/CustomLoader.git
      ```
-   - Choose the version rules you want to apply (e.g., exact version, range, or branch).
+<!--   - Choose the version rules you want to apply (e.g., exact version, range, or branch).-->
 
 4. **Add Package:**
    - Click "Add Package" to include it in your project.
@@ -59,3 +59,21 @@ Swift Package Manager is Apple's tool for managing the distribution of Swift cod
 
 3. **Update Dependencies:**
    - Run `swift package update` to fetch and resolve the new dependencies.
+
+## Usage (UIKit)
+
+
+1. **Import the Package:**
+
+   ```swift
+    import CustomLoader
+   
+    let loader = LoaderUIKIt()
+    loader.translatesAutoresizingMaskIntoConstraints = false
+    loader.frame = self.view.bounds
+    1. loader.showLoader()
+    2. loader.showLoader(color: .green)  // default color is black
+    3. loader.showLoader(color: .green, frameWidth: 100.0)  // default frameWidth is 100.0 
+    self.view.addSubview(loader)
+  
+    ```
