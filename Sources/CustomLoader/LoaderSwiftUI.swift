@@ -14,7 +14,7 @@ public struct LoaderSwiftUI: View {
     var frameWidth: CGFloat = 100.0
     var color: Color = .black
     
-    public init(color: Color = .red, frameWidth: CGFloat = 100.0) {
+    public init(color: Color = .black, frameWidth: CGFloat = 100.0) {
         self.color = color
         self.frameWidth = frameWidth
     }
