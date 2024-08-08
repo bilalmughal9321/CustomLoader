@@ -12,10 +12,11 @@ public struct LoaderSwiftUI: View {
     @State var isAnimating: Bool = false
     @State private var animationAmount = 1.0
     var frameWidth: CGFloat = 100.0
-    var color: Color = .blue
+    var color: Color = .black
     
-    public init(color: Color = .red) {
+    public init(color: Color = .red, frameWidth: CGFloat = 100.0) {
         self.color = color
+        self.frameWidth = frameWidth
     }
     
     public var body: some View {

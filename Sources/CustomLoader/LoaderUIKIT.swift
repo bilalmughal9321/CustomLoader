@@ -23,9 +23,9 @@ public class LoaderUIKIt: UIView {
 //        showLoader()
     }
     
-    public func showLoader(colors: UIColor = .blue) {
+    public func showLoader(colors: UIColor = .black, frameWidth: CGFloat = 100.0) {
         // Create LoaderAnimation SwiftUI view
-        let loaderAnimation = LoaderSwiftUI(color: Color(uiColor: colors))
+        let loaderAnimation = LoaderSwiftUI(color: Color(uiColor: colors), frameWidth: frameWidth)
         
         // Initialize UIHostingController with LoaderAnimation
         hostingController = UIHostingController(rootView: loaderAnimation)
