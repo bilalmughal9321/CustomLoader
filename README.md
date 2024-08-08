@@ -77,3 +77,25 @@ Swift Package Manager is Apple's tool for managing the distribution of Swift cod
     self.view.addSubview(loader)
   
     ```
+## Usage (SwiftUI)
+
+1. **Import the Package:**
+
+   ```swift
+   
+    import CustomLoader
+
+    struct SwiftUIVC: View {
+        var body: some View {
+            1. LoaderSwiftUI()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
+            2. LoaderSwiftUI(color: .green) // default color is black
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
+            3. LoaderSwiftUI(color: .green, frameWidth: 80) // default frameWidth is 100.0 
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+  
+    ```
