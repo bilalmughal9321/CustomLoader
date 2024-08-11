@@ -26,6 +26,7 @@ Swift Package Manager is Apple's tool for managing the distribution of Swift cod
      ```
      https://github.com/bilalmughal9321/CustomLoader.git
      ```
+   - Check the Dependency rule and select `branch` and the type `main`.
 <!--   - Choose the version rules you want to apply (e.g., exact version, range, or branch).-->
 
 4. **Add Package:**
