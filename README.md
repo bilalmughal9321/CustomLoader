@@ -71,9 +71,9 @@ Swift Package Manager is Apple's tool for managing the distribution of Swift cod
     let loader = LoaderUIKIt()
     loader.translatesAutoresizingMaskIntoConstraints = false
     loader.frame = self.view.bounds
-    1. loader.showLoader()
-    2. loader.showLoader(color: .green)  // default color is black
-    3. loader.showLoader(color: .green, frameWidth: 100.0)  // default frameWidth is 100.0 
+    loader.showLoader()
+    loader.showLoader(color: .green)  // default color is black
+    loader.showLoader(color: .green, frameWidth: 100.0)  // default frameWidth is 100.0 
     self.view.addSubview(loader)
   
     ```
@@ -86,13 +86,13 @@ Swift Package Manager is Apple's tool for managing the distribution of Swift cod
 
     struct SwiftUIVC: View {
         var body: some View {
-            1. LoaderSwiftUI()
+           LoaderSwiftUI()
              .frame(maxWidth: .infinity, maxHeight: .infinity)
      
-            2. LoaderSwiftUI(color: .green) // default color is black
+           LoaderSwiftUI(color: .green) // default color is black
              .frame(maxWidth: .infinity, maxHeight: .infinity)
      
-            3. LoaderSwiftUI(color: .green, frameWidth: 80) // default frameWidth is 100.0 
+           LoaderSwiftUI(color: .green, frameWidth: 80) // default frameWidth is 100.0 
              .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
