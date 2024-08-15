@@ -13,16 +13,18 @@ public struct LoaderSwiftUI: View {
     @State private var animationAmount = 1.0
     var frameWidth: CGFloat = 100.0
     var color: Color = .black
+    var backgroundColor: Color
     
-    public init(color: Color = .black, frameWidth: CGFloat = 100.0) {
+    public init(color: Color = .black, frameWidth: CGFloat = 100.0, backgroundColor: Color = .clear) {
         self.color = color
         self.frameWidth = frameWidth
+        self.backgroundColor = backgroundColor
     }
     
     public var body: some View {
         
         ZStack {
-            Color.clear
+            backgroundColor
                 .ignoresSafeArea()
             ForEach(0 ..< 5) { index in
                 Circle()
@@ -52,9 +54,9 @@ public struct LoaderSwiftUI: View {
     }
 }
 
-//#Preview {
-//    LoaderSwiftUI()
-//}
+#Preview {
+    LoaderSwiftUI()
+}
 
 
 
