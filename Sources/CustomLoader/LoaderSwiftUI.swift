@@ -42,7 +42,7 @@ public struct LoaderSwiftUI: View {
                         .repeatForever(autoreverses: false), value: isAnimating)
             }
         }
-        .disabled(isAnimating)
+        .disabled(true)
         .onAppear{
             isAnimating = true
         }
