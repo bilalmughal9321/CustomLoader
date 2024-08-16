@@ -15,7 +15,7 @@ public struct LoaderSwiftUI: View {
     var color: Color = .black
     var backgroundColor: Color
     
-    public init(color: Color = .black, frameWidth: CGFloat = 100.0, backgroundColor: Color = .clear) {
+    public init(color: Color = .black, frameWidth: CGFloat = 50.0, backgroundColor: Color = .clear) {
         self.color = color
         self.frameWidth = frameWidth
         self.backgroundColor = backgroundColor
@@ -24,9 +24,10 @@ public struct LoaderSwiftUI: View {
     public var body: some View {
         
         ZStack {
+            
             backgroundColor
-//                .ignoresSafeArea()
-                .frame(width: frameWidth + 40, height: frameWidth + 40)
+//                .frame(width: frameWidth + 40, height: frameWidth + 40)
+                .ignoresSafeArea()
                 .clipShape(.rect(cornerRadius: 10))
                 
             ForEach(0 ..< 5) { index in
