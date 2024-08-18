@@ -26,8 +26,8 @@ public struct LoaderSwiftUI: View {
         ZStack {
             
             backgroundColor
-//                .frame(width: frameWidth + 40, height: frameWidth + 40)
-                .ignoresSafeArea()
+                .frame(width: frameWidth + 40, height: frameWidth + 40)
+//                .ignoresSafeArea()
                 .clipShape(.rect(cornerRadius: 10))
                 
             ForEach(0 ..< 5) { index in
